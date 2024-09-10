@@ -11,7 +11,9 @@ public:
 	void delete_data();
 
 	std::vector<Animal_kotkov*> get_animals();
-
+	~Zoo_kotkov() {
+		delete_data();
+	}
 
 private:
 	std::vector<Animal_kotkov*> _animals;

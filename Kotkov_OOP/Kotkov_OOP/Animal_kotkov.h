@@ -7,6 +7,7 @@ public:
 	void input_animal();
 	void print(std::ostream& stream, bool pretty);
 	bool import_animal(std::ifstream& stream);
+	
 
 private:
 	std::string _name = "None";
