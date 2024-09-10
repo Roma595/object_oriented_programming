@@ -127,7 +127,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Animal_kotkov.cpp" />
     <ClCompile Include="Kotkov_OOP.cpp" />
+    <ClCompile Include="Menu_kotkov.cpp" />
+    <ClCompile Include="Utilities_kotkov.cpp" />
+    <ClCompile Include="Zoo_kotkov.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Animal_kotkov.h" />
+    <ClInclude Include="Menu_kotkov.h" />
+    <ClInclude Include="Utilities_kotkov.h" />
+    <ClInclude Include="Zoo_kotkov.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="data.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
