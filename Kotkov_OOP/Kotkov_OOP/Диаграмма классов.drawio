@@ -1,0 +1,70 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 YaBrowser/24.7.0.0 Safari/537.36" version="24.7.16">
+  <diagram name="Страница — 1" id="oP-W5sQoeL-hIYbtbnWb">
+    <mxGraphModel dx="2117" dy="567" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="FPa5NNiCb6RjS_OtjEjF-9" value="Animal_kotkov" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="70" width="320" height="238" as="geometry" />
+        </mxCell>
+        <mxCell id="FPa5NNiCb6RjS_OtjEjF-10" value="# _name: std::string&lt;div&gt;# _month_of_birth: int&lt;/div&gt;&lt;div&gt;# _year_of_birth: int&lt;/div&gt;&lt;div&gt;# _weight: double&lt;/div&gt;&lt;div&gt;# _predator: bool&lt;/div&gt;&lt;div&gt;-&amp;nbsp;friend class boost::serialization::access;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="FPa5NNiCb6RjS_OtjEjF-9">
+          <mxGeometry y="26" width="320" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="FPa5NNiCb6RjS_OtjEjF-11" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="FPa5NNiCb6RjS_OtjEjF-9">
+          <mxGeometry y="130" width="320" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="FPa5NNiCb6RjS_OtjEjF-15" value="+ virtual input_animal(): void&lt;div&gt;+ virtual print(std::ostream&amp;amp; stream, bool pretty): void&lt;/div&gt;&lt;div&gt;- serialize(Archive&amp;amp; ar, const unsigned int version): void&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="FPa5NNiCb6RjS_OtjEjF-9">
+          <mxGeometry y="178" width="320" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FPa5NNiCb6RjS_OtjEjF-20" value="Bird" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="380" width="320" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="FPa5NNiCb6RjS_OtjEjF-21" value="# _can_fly: bool&lt;div&gt;-&amp;nbsp;friend class boost::serialization::access;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="FPa5NNiCb6RjS_OtjEjF-20">
+          <mxGeometry y="26" width="320" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="FPa5NNiCb6RjS_OtjEjF-22" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="FPa5NNiCb6RjS_OtjEjF-20">
+          <mxGeometry y="60" width="320" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="FPa5NNiCb6RjS_OtjEjF-23" value="+ input_animal() override: void&lt;div&gt;+ print(std::ostream&amp;amp; stream, bool pretty) override: void&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;text-wrap: nowrap;&quot;&gt;- serialize(Archive&amp;amp; ar, const unsigned int version): void&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="FPa5NNiCb6RjS_OtjEjF-20">
+          <mxGeometry y="68" width="320" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="FPa5NNiCb6RjS_OtjEjF-24" value="Zoo_kotkov" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-200" y="70" width="390" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="FPa5NNiCb6RjS_OtjEjF-25" value="- _animals : std::vector&amp;lt;boost::shared_ptr&amp;lt;Animal_kotkov&amp;gt;&amp;gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="FPa5NNiCb6RjS_OtjEjF-24">
+          <mxGeometry y="26" width="390" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="FPa5NNiCb6RjS_OtjEjF-26" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="FPa5NNiCb6RjS_OtjEjF-24">
+          <mxGeometry y="70" width="390" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="FPa5NNiCb6RjS_OtjEjF-27" value="+ add_animal(boost::shared_ptr&amp;lt;Animal_kotkov&amp;gt;): void;&lt;div&gt;+ print_data(): void;&lt;/div&gt;&lt;div&gt;+ save_data(std::ostream&amp;amp; stream): void;&lt;/div&gt;&lt;div&gt;+ load_data(std::ifstream&amp;amp; stream): bool;&lt;/div&gt;&lt;div&gt;+ delete_data(): void;&lt;/div&gt;&lt;div&gt;+ get_animals(): std::vector&amp;lt;boost::shared_ptr&amp;lt;Animal_kotkov&amp;gt;&amp;gt;&lt;/div&gt;&lt;div&gt;+ Zoo_kotkov(): ~&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="FPa5NNiCb6RjS_OtjEjF-24">
+          <mxGeometry y="78" width="390" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="FPa5NNiCb6RjS_OtjEjF-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.501;entryY=1.033;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="FPa5NNiCb6RjS_OtjEjF-20" target="FPa5NNiCb6RjS_OtjEjF-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FPa5NNiCb6RjS_OtjEjF-40" value="1" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=1.005;exitY=0.189;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.004;entryY=0.665;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="FPa5NNiCb6RjS_OtjEjF-27" target="FPa5NNiCb6RjS_OtjEjF-10">
+          <mxGeometry x="-1" y="3" relative="1" as="geometry">
+            <mxPoint x="200" y="170" as="sourcePoint" />
+            <mxPoint x="360" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FPa5NNiCb6RjS_OtjEjF-41" value="Menu_kotkov&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-70" y="380" width="250" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="FPa5NNiCb6RjS_OtjEjF-43" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="FPa5NNiCb6RjS_OtjEjF-41">
+          <mxGeometry y="26" width="250" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="FPa5NNiCb6RjS_OtjEjF-44" value="+ print_menu: void;&lt;div&gt;+ add_animal(Zoo_kotkov&amp;amp; zoo): void;&lt;/div&gt;&lt;div&gt;+ add_bird(Zoo_kotkov&amp;amp; zoo): void;&lt;/div&gt;&lt;div&gt;+ view_data(Zoo_kotkov&amp;amp; zoo): void;&lt;/div&gt;&lt;div&gt;+ save_data(Zoo_kotkov&amp;amp; zoo): void;&lt;/div&gt;&lt;div&gt;+ load_data(Zoo_kotkov&amp;amp; zoo): void;&lt;/div&gt;&lt;div&gt;+ delete_data(Zoo_kotkov&amp;amp; zoo): void;&lt;/div&gt;&lt;div&gt;+ main_menu(): void;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="FPa5NNiCb6RjS_OtjEjF-41">
+          <mxGeometry y="34" width="250" height="126" as="geometry" />
+        </mxCell>
+        <mxCell id="FPa5NNiCb6RjS_OtjEjF-45" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;entryX=0.663;entryY=0.989;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="FPa5NNiCb6RjS_OtjEjF-41" target="FPa5NNiCb6RjS_OtjEjF-27">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="20" y="330" as="sourcePoint" />
+            <mxPoint x="180" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

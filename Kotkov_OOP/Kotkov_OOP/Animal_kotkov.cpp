@@ -28,13 +28,3 @@ void Animal_kotkov::print(std::ostream& stream, bool pretty) {
 	print_value(stream, _weight, "Вес (кг):       ", pretty);
 	print_value(stream, _predator, "Хищник (1 - да, 0 - нет): ", pretty);
 }
-
-bool Animal_kotkov::import_animal(std::ifstream& stream) {
-	_name = read_string(stream);
-	if (validity_enter<int>(stream, _month_of_birth, 1, 12) && validity_enter<int>(stream, _year_of_birth, 1900, 2024) && validity_enter<double>(stream, _weight, 0.5, 7000.0) && validity_enter<bool>(stream, _predator, 0, 1) ) {
-		return true;
-	}
-	std::cout << "Ошибка: файл некорректный." << std::endl;
-	return false;
-	
-}
