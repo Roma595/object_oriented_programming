@@ -3,12 +3,14 @@
 #include "Animal_kotkov.h"
 #include <boost/serialization/serialization.hpp>
 #include <boost/serialization/base_object.hpp>
-
+#include <boost/serialization/export.hpp>
 
 class Bird: public Animal_kotkov{
 public:
 	void input_animal() override;
 	void print(std::ostream& stream, bool pretty) override;
+
+	Bird() {  }
 protected:
 	bool _can_fly = 0;
 private:

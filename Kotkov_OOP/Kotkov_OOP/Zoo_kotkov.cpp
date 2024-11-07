@@ -8,16 +8,18 @@
 
 BOOST_CLASS_EXPORT(Bird);
 
-void Zoo_kotkov::add_animal(boost::shared_ptr<Animal_kotkov> animal) {
+void Zoo_kotkov::add_animal(std::shared_ptr<Animal_kotkov> animal) {
 	_animals.push_back(animal);
 }
 
 void Zoo_kotkov::save_data(std::ostream& stream) {
-	stream << _animals.size() << std::endl;;
+	boost::archive::text_oarchive ar(stream);
+	ar& *this;
+	/*stream << _animals.size() << std::endl;;
 	boost::archive::text_oarchive ar(stream);
 	for (auto an : _animals) {
 		ar& an;
-	}
+	}*/
 }
 
 void Zoo_kotkov::print_data() {
@@ -33,19 +35,12 @@ void Zoo_kotkov::delete_data() {
 }
 
 bool Zoo_kotkov::load_data(std::ifstream& stream) {
-	size_t count;
-	stream >> count;
 	boost::archive::text_iarchive ar(stream);
-
-	for (int i = 0; i < count; i++) {
-		boost::shared_ptr<Animal_kotkov> animal = boost::make_shared<Animal_kotkov>();
-		ar& animal;
-		_animals.push_back(animal);
-	}
+	ar&* this;
 	return true;
 }
 
-std::vector<boost::shared_ptr<Animal_kotkov>> Zoo_kotkov::get_animals() {
+std::vector<std::shared_ptr<Animal_kotkov>> Zoo_kotkov::get_animals() {
 	return _animals;
 }
 

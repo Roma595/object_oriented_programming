@@ -13,7 +13,7 @@ protected:
 	int _year_of_birth = 0;
 	double _weight = 0;
 	bool _predator = 0;
-private:
+private:	
 	friend class boost::serialization::access;
 	template<class Archive>
 	void serialize(Archive& ar, const unsigned int version) {

@@ -19,7 +19,7 @@ void print_menu() {
 }
 
 void add_animal(Zoo_kotkov& zoo) {
-	boost::shared_ptr<Animal_kotkov> animal = boost::make_shared<Animal_kotkov>();
+	std::shared_ptr<Animal_kotkov> animal = std::make_shared<Animal_kotkov>();
 	animal->input_animal();
 	zoo.add_animal(animal);
 	
@@ -27,7 +27,7 @@ void add_animal(Zoo_kotkov& zoo) {
 }
 
 void add_bird(Zoo_kotkov& zoo) {
-	boost::shared_ptr<Animal_kotkov> bird = boost::make_shared<Bird>();
+	std::shared_ptr<Animal_kotkov> bird = std::make_shared<Bird>();
 	bird->input_animal();
 	zoo.add_animal(bird);
 

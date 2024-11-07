@@ -1,5 +1,6 @@
 #include "Bird.h"
 
+
 void Bird::input_animal(){
 	Animal_kotkov::input_animal();
 	std::cout << "ѕтица умеет летать? (1 - да, 0 - нет)" << std::endl;
