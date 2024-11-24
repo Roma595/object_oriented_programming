@@ -23,7 +23,8 @@
 			"include",
 			"find_package",
 			"find_dependency",
-			"_qt_internal_find_qt_dependencies"
+			"_qt_internal_find_qt_dependencies",
+			"include_directories"
 		],
 		"files" : 
 		[
@@ -75,13 +76,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 69,
+				"line" : 77,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 52,
+				"line" : 60,
 				"parent" : 0
 			},
 			{
@@ -259,6 +260,12 @@
 				"file" : 13,
 				"line" : 61,
 				"parent" : 38
+			},
+			{
+				"command" : 11,
+				"file" : 1,
+				"line" : 55,
+				"parent" : 0
 			}
 		]
 	},
@@ -327,6 +334,10 @@
 				{
 					"backtrace" : 0,
 					"path" : "C:/Users/kotko/Documents/GitHub/object_oriented_programming/lab3_OOP/build/Desktop_Qt_6_8_0_MSVC2022_64bit-Debug/lab3_OOP_autogen/include"
+				},
+				{
+					"backtrace" : 40,
+					"path" : "C:/Users/kotko/source/dependences/boost_1_86_0"
 				},
 				{
 					"backtrace" : 14,

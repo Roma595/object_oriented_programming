@@ -28,6 +28,8 @@ class Ui_MainWindow
 public:
     QAction *Open;
     QAction *Exit;
+    QAction *Save;
+    QAction *CLear;
     QWidget *centralwidget;
     QVBoxLayout *verticalLayout;
     QScrollArea *scrollArea;
@@ -45,6 +47,10 @@ public:
         Open->setObjectName("Open");
         Exit = new QAction(MainWindow);
         Exit->setObjectName("Exit");
+        Save = new QAction(MainWindow);
+        Save->setObjectName("Save");
+        CLear = new QAction(MainWindow);
+        CLear->setObjectName("CLear");
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         verticalLayout = new QVBoxLayout(centralwidget);
@@ -73,6 +79,8 @@ public:
 
         menubar->addAction(menu->menuAction());
         menu->addAction(Open);
+        menu->addAction(Save);
+        menu->addAction(CLear);
         menu->addAction(Exit);
 
         retranslateUi(MainWindow);
@@ -86,6 +94,8 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         Open->setText(QCoreApplication::translate("MainWindow", "\320\236\321\202\320\272\321\200\321\213\321\202\321\214", nullptr));
         Exit->setText(QCoreApplication::translate("MainWindow", "\320\227\320\260\320\272\321\200\321\213\321\202\321\214", nullptr));
+        Save->setText(QCoreApplication::translate("MainWindow", "\320\241\320\276\321\205\321\200\320\260\320\275\320\270\321\202\321\214 \320\272\320\260\320\272", nullptr));
+        CLear->setText(QCoreApplication::translate("MainWindow", "\320\236\321\207\320\270\321\201\321\202\320\270\321\202\321\214 ", nullptr));
         menu->setTitle(QCoreApplication::translate("MainWindow", "\320\244\320\260\320\271\320\273", nullptr));
     } // retranslateUi
 

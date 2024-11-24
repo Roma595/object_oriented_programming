@@ -21,6 +21,10 @@ public:
 private slots:
     void on_Open_triggered();
 
+    void on_Save_triggered();
+
+    void on_CLear_triggered();
+
 private:
     Ui::MainWindow *ui;
 };
