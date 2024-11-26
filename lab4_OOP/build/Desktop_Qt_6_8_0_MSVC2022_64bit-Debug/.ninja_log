@@ -1,0 +1,30 @@
+# ninja log v6
+248	717	7543175240788095	lab4_OOP_autogen/timestamp	56c78ade47e57f2
+721	13098	7543175245507034	CMakeFiles/lab4_OOP.dir/lab4_OOP_autogen/mocs_compilation.cpp.obj	eefc5a7e56fcb192
+248	717	7543175240788095	lab4_OOP_autogen/mocs_compilation.cpp	56c78ade47e57f2
+248	717	7543175240788095	C:/Users/Рома Котков/Documents/GitHub/object_oriented_programming/lab4_OOP/build/Desktop_Qt_6_8_0_MSVC2022_64bit-Debug/lab4_OOP_autogen/timestamp	56c78ade47e57f2
+20217	20845	7543175440466344	lab4_OOP.exe	f1cd3a82a123676b
+248	717	7543175240788095	C:/Users/Рома Котков/Documents/GitHub/object_oriented_programming/lab4_OOP/build/Desktop_Qt_6_8_0_MSVC2022_64bit-Debug/lab4_OOP_autogen/mocs_compilation.cpp	56c78ade47e57f2
+734	13040	7543175245636957	CMakeFiles/lab4_OOP.dir/mainwindow.cpp.obj	e86774712742df5
+754	11658	7543175245836842	CMakeFiles/lab4_OOP.dir/kotkov_widget.cpp.obj	d0b2f12289b9a9e3
+11775	22802	7541875433342442	CMakeFiles/lab4_OOP.dir/editlist.cpp.obj	bbb574946f399b9
+727	12857	7543175245567023	CMakeFiles/lab4_OOP.dir/main.cpp.obj	4f1a4bc9ab2fb8c8
+747	9221	7543175245766885	CMakeFiles/lab4_OOP.dir/Bird.cpp.obj	ce252c066ec3ce9e
+9094	18558	7543175329232942	CMakeFiles/lab4_OOP.dir/Zoo_kotkov.cpp.obj	a7ab9e472f639c46
+741	9093	7543175245706920	CMakeFiles/lab4_OOP.dir/Animal_kotkov.cpp.obj	97d06c117b654998
+9222	18895	7543175330516125	CMakeFiles/lab4_OOP.dir/edit_list.cpp.obj	5cfea1d35a28844
+11659	20216	7543175354885220	CMakeFiles/lab4_OOP.dir/add_item.cpp.obj	7af428cb1795b4f7
+169	541	7543176440446118	lab4_OOP_autogen/timestamp	56c78ade47e57f2
+169	541	7543176440446118	lab4_OOP_autogen/mocs_compilation.cpp	56c78ade47e57f2
+169	541	7543176440446118	C:/Users/Рома Котков/Documents/GitHub/object_oriented_programming/lab4_OOP/build/Desktop_Qt_6_8_0_MSVC2022_64bit-Debug/lab4_OOP_autogen/timestamp	56c78ade47e57f2
+169	541	7543176440446118	C:/Users/Рома Котков/Documents/GitHub/object_oriented_programming/lab4_OOP/build/Desktop_Qt_6_8_0_MSVC2022_64bit-Debug/lab4_OOP_autogen/mocs_compilation.cpp	56c78ade47e57f2
+566	9080	7543176444466500	CMakeFiles/lab4_OOP.dir/Animal_kotkov.cpp.obj	97d06c117b654998
+573	9121	7543176444622752	CMakeFiles/lab4_OOP.dir/Bird.cpp.obj	ce252c066ec3ce9e
+580	11381	7543176444622752	CMakeFiles/lab4_OOP.dir/kotkov_widget.cpp.obj	d0b2f12289b9a9e3
+552	12827	7543176444310260	CMakeFiles/lab4_OOP.dir/main.cpp.obj	4f1a4bc9ab2fb8c8
+559	12969	7543176444466500	CMakeFiles/lab4_OOP.dir/mainwindow.cpp.obj	e86774712742df5
+545	13040	7543176444310260	CMakeFiles/lab4_OOP.dir/lab4_OOP_autogen/mocs_compilation.cpp.obj	eefc5a7e56fcb192
+9081	18249	7543176529694496	CMakeFiles/lab4_OOP.dir/Zoo_kotkov.cpp.obj	a7ab9e472f639c46
+9125	18872	7543176530116278	CMakeFiles/lab4_OOP.dir/edit_list.cpp.obj	5cfea1d35a28844
+11382	20104	7543176552716098	CMakeFiles/lab4_OOP.dir/add_item.cpp.obj	7af428cb1795b4f7
+20105	20556	7543176639934194	lab4_OOP.exe	f1cd3a82a123676b

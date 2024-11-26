@@ -17,6 +17,8 @@ QSize Kotkov_Widget::minimumSizeHint() const{
     for(auto& item : table_size){
         w += item * 8;
     }
+    h += 40;
+    w += 40;
     return QSize(w,h);
 }
 void Kotkov_Widget::get_table_size(){
@@ -37,13 +39,14 @@ void Kotkov_Widget::get_table_size(){
 void Kotkov_Widget::paintEvent(QPaintEvent *event){
     QPainter painter(this);
     if(!zoo.get_animals().empty()){
+        get_table_size();
         zoo.draw(painter, table_size);
         resize(minimumSizeHint());
     }
 }
 
 void Kotkov_Widget::load(QString& path){
-    std::ifstream in(path.toStdString());
+    std::ifstream in(path.toLocal8Bit());
     zoo.delete_data();
     zoo.load_data(in);
     get_table_size();
@@ -51,7 +54,7 @@ void Kotkov_Widget::load(QString& path){
 }
 
 void Kotkov_Widget::save(QString& path){
-    std::ofstream out(path.toStdString());
+    std::ofstream out(path.toLocal8Bit());
     zoo.save_data(out);
     update();
 }

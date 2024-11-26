@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-1bc11bb0886117ad71ce.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "lab4_OOP",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "lab4_OOP::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lab4_OOP-Debug-b999624718a84b0930c6.json",
+					"name" : "lab4_OOP",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "lab4_OOP_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lab4_OOP_autogen-Debug-26db6e4e3f1548c9edbd.json",
+					"name" : "lab4_OOP_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "lab4_OOP_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lab4_OOP_autogen_timestamp_deps-Debug-ed207c2e1734d2348fe0.json",
+					"name" : "lab4_OOP_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/\u0420\u043e\u043c\u0430 \u041a\u043e\u0442\u043a\u043e\u0432/Documents/GitHub/object_oriented_programming/lab4_OOP/build/Desktop_Qt_6_8_0_MSVC2022_64bit-Debug",
+		"source" : "C:/Users/\u0420\u043e\u043c\u0430 \u041a\u043e\u0442\u043a\u043e\u0432/Documents/GitHub/object_oriented_programming/lab4_OOP"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

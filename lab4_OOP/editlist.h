@@ -5,7 +5,7 @@
 #include <QMessageBox>
 
 #include "Zoo_kotkov.h"
-#include "../lab4_OOP/add_dialog.h"
+//#include "add_dialog.h"
 
 
 namespace Ui {
