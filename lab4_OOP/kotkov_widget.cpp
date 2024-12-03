@@ -50,6 +50,7 @@ void Kotkov_Widget::load(QString& path){
     zoo.delete_data();
     zoo.load_data(in);
     get_table_size();
+    std::cout << zoo.get_animals().size();
     update();
 }
 
