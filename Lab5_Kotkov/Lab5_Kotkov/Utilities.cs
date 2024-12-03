@@ -13,7 +13,7 @@ namespace Lab5_Kotkov
         {
             try
             {
-                result = (T)Convert.ChangeType(input, typeof(T)); // Attempt conversion
+                result = (T)Convert.ChangeType(input, typeof(T));
                 return true;
             }
             catch

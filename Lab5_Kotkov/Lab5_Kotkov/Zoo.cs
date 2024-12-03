@@ -9,19 +9,16 @@ namespace Lab5_Kotkov
 {
     internal class Zoo
     {
-        private List<Animal> animals;
-        public Zoo() { animals = []; }
-        public void AddAnimal(ref Animal animal)
+        public List<Animal> Animals {  get; set; }
+
+        public Zoo() { Animals = []; }
+        public void AddAnimal(Animal animal)
         {
-            animals.Add(animal);
+            Animals.Add(animal);
         }
-        public void AddBird(ref Bird bird)
+        public void AddBird(Bird bird)
         {
-            animals.Add(bird);
-        }
-        public List<Animal> GetAnimals()
-        {
-            return animals;
+            Animals.Add(bird);
         }
         public void Save()
         {
@@ -30,10 +27,9 @@ namespace Lab5_Kotkov
             {
                 string fileName = Console.ReadLine();
                 var xs = new XmlSerializer(typeof(List<Animal>), new[] { typeof(Animal), typeof(Bird) });
-                using (Stream fs = new FileStream($"{fileName}.xml", FileMode.OpenOrCreate))
-                {
-                    xs.Serialize(fs, animals);
-                }
+                using Stream fs = new FileStream($"{fileName}.xml", FileMode.OpenOrCreate);
+                xs.Serialize(fs, Animals);
+
                 Console.WriteLine("Данные сохранены");
             }
             catch
@@ -51,9 +47,7 @@ namespace Lab5_Kotkov
                 string fileName = Console.ReadLine();
                 var xs = new XmlSerializer(typeof(List<Animal>), new[] { typeof(Animal), typeof(Bird) });
                 using (Stream fs = new FileStream($"{fileName}.xml", FileMode.Open))
-                {
-                    animals = xs.Deserialize(fs) as List<Animal>;
-                }
+                Animals = xs.Deserialize(fs) as List<Animal>;
                 Console.WriteLine("Данные загружены");
             }
             catch 
@@ -64,7 +58,7 @@ namespace Lab5_Kotkov
         }
         public void ClearData()
         {
-            animals.Clear();
+            Animals.Clear();
         }
     }
 }

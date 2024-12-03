@@ -23,20 +23,22 @@ namespace Lab5_Kotkov
 
         public static void MainMenu()
         {
-            int chooice;
             Zoo zoo = new();
             
             do
             {
                 PrintMenu();
-                chooice = Utilities.ValidityEnterInteractive<int>(0, 6);
-                switch (chooice)
+                switch (Utilities.ValidityEnterInteractive<int>(0, 6))
                 {
+                    case 0:
+                        {
+                            return;
+                        }
                     case 1:
                         {
                             Animal animal = new();
                             animal.InputAnimal();
-                            zoo.AddAnimal(ref animal);
+                            zoo.AddAnimal(animal);
                             Console.WriteLine("Животное добавлено");
                             break;
                         };
@@ -44,18 +46,17 @@ namespace Lab5_Kotkov
                         {
                             Bird bird = new();
                             bird.InputAnimal();
-                            zoo.AddBird(ref bird);
+                            zoo.AddBird(bird);
                             Console.WriteLine("Птица добавлена");
                             break;
                         };
                     case 3:
                         {
-                            List<Animal> list = zoo.GetAnimals();
-                            if(list.Count != 0)
+                            if (zoo.Animals.Count != 0)
                             {
-                                for (int i = 0; i < list.Count; ++i)
+                                foreach (var animal in zoo.Animals)
                                 {
-                                    list[i].Print();
+                                    animal.Print();
                                     Console.WriteLine();
                                 }
                             }
@@ -82,7 +83,7 @@ namespace Lab5_Kotkov
                         };
 
                 }
-            }while (chooice != 0);
+            }while (true);
         }
     }
 }

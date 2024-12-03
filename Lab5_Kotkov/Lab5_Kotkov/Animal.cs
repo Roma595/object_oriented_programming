@@ -9,53 +9,47 @@ using System.Xml.Serialization;
 namespace Lab5_Kotkov
 {
     [Serializable]
-    [XmlType("Animal")]
     public class Animal
     {
-        [XmlElement(ElementName = "Name")]
-        public string _name;
+        public string Name {  get; set; }
 
-        [XmlElement(ElementName = "Month")]
-        public int _month_of_birth;
+        public int Month_of_birth {  get; set; }
 
-        [XmlElement(ElementName = "Year")]
-        public int _year_of_birth;
+        public int Year_of_birth { get; set; }
 
-        [XmlElement(ElementName = "Weight")]
-        public double _weight;
+        public double Weight {  get; set; }
 
-        [XmlElement(ElementName = "Predator")]
-        public bool _predator;
+        public bool Predator {  get; set; }
 
         public virtual void InputAnimal()
         {
             Console.WriteLine("Введите имя:");
-            while (string.IsNullOrWhiteSpace(_name))
+            while (string.IsNullOrWhiteSpace(Name))
             {
-                _name = Console.ReadLine();
+                Name = Console.ReadLine();
             }
 
             Console.WriteLine("Введите месяц рождения:");
-            _month_of_birth = Utilities.ValidityEnterInteractive<int>(1, 12);
+            Month_of_birth = Utilities.ValidityEnterInteractive<int>(1, 12);
 
             Console.WriteLine("Введите год рождения:");
-            _year_of_birth = Utilities.ValidityEnterInteractive<int>(1900, 2024);
+            Year_of_birth = Utilities.ValidityEnterInteractive<int>(1900, 2024);
 
             Console.WriteLine("Введите вес, кг:");
-            _weight = Utilities.ValidityEnterInteractive<double>(0.1, 10000.0);
+            Weight = Utilities.ValidityEnterInteractive<double>(0.1, 10000.0);
 
             Console.WriteLine("Хищник? (0 - нет, 1 - да):");
-            _predator = Convert.ToBoolean(Utilities.ValidityEnterInteractive<int>(0, 1));
+            Predator = Convert.ToBoolean(Utilities.ValidityEnterInteractive<int>(0, 1));
 
         }
 
         public virtual void Print()
         {
-            Console.WriteLine($"Имя:                               {_name}");
-            Console.WriteLine($"Месяц рождения:                    {_month_of_birth}");
-            Console.WriteLine($"Год рождения:                      {_year_of_birth}");
-            Console.WriteLine($"Вес, кг:                           {_weight}");
-            Console.WriteLine($"Хищник? (0 - нет, 1 - да):         {Convert.ToInt32(_predator)}");
+            Console.WriteLine($"Имя:                               {Name}");
+            Console.WriteLine($"Месяц рождения:                    {Month_of_birth}");
+            Console.WriteLine($"Год рождения:                      {Year_of_birth}");
+            Console.WriteLine($"Вес, кг:                           {Weight}");
+            Console.WriteLine($"Хищник? (0 - нет, 1 - да):         {Convert.ToInt32(Predator)}");
         }
     }
 }
