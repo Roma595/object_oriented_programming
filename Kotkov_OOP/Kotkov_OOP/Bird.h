@@ -11,15 +11,14 @@ public:
 	void print(std::ostream& stream, bool pretty) override;
 
 	Bird() {  }
-protected:
-	bool _can_fly = 0;
+	bool Can_fly = 0;
 private:
 	friend class boost::serialization::access;
 	template <typename Archive>
 	void serialize(Archive& ar, const unsigned int version)
 	{
 		ar& boost::serialization::base_object<Animal_kotkov>(*this);
-		ar& _can_fly;
+		ar& Can_fly;
 	}
 };
 

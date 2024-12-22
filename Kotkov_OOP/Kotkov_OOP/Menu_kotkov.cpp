@@ -27,7 +27,7 @@ void add_animal(Zoo_kotkov& zoo) {
 }
 
 void add_bird(Zoo_kotkov& zoo) {
-	std::shared_ptr<Animal_kotkov> bird = std::make_shared<Bird>();
+	std::shared_ptr<Bird> bird = std::make_shared<Bird>();
 	bird->input_animal();
 	zoo.add_animal(bird);
 

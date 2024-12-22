@@ -1,9 +1,8 @@
 #pragma once
 #include <vector>
 #include <fstream>
-#include <boost/archive/binary_oarchive.hpp>
+
 #include <boost/serialization/serialization.hpp>
-#include <boost/archive/binary_iarchive.hpp>
 #include <boost/serialization/shared_ptr.hpp>
 #include <boost/serialization/vector.hpp>
 #include "Animal_kotkov.h"
@@ -19,9 +18,9 @@ public:
 
 	std::vector<std::shared_ptr<Animal_kotkov>> get_animals();
 
-	~Zoo_kotkov() {
+	/*~Zoo_kotkov() {
 		delete_data();
-	}
+	}*/
 
 private:
 	std::vector<std::shared_ptr<Animal_kotkov>> _animals;

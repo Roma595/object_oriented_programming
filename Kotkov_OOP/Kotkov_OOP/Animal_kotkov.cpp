@@ -5,26 +5,26 @@
 
 void Animal_kotkov::input_animal() {
 	std::cout << "Введите имя:" << std::endl;
-	_name = read_string(std::cin);
+	Name = read_string(std::cin);
 
 	std::cout << "Введите месяц рождения:" << std::endl;
-	_month_of_birth = validity_enter_interactive<int>(1, 12);
+	Month_of_birth = validity_enter_interactive<int>(1, 12);
 
 	std::cout << "Введите год рождения:" << std::endl;
-	_year_of_birth = validity_enter_interactive<int>(1900, 2024);
+	Year_of_birth = validity_enter_interactive<int>(1900, 2024);
 
 	std::cout << "Введите вес (кг):" << std::endl;
-	_weight = validity_enter_interactive<double>(0.5, 7000.0);
+	Weight = validity_enter_interactive<double>(0.5, 7000.0);
 
 	std::cout << "Это животное хищник? (1 - да, 0 - нет):" << std::endl;
-	_predator = validity_enter_interactive<bool>(0, 1);
+	Predator = validity_enter_interactive<bool>(0, 1);
 
 }
 
 void Animal_kotkov::print(std::ostream& stream, bool pretty) {
-	print_value(stream, _name, "Имя:            ", pretty);
-	print_value(stream, _month_of_birth, "Месяц рождения: ", pretty);
-	print_value(stream, _year_of_birth, "Год рождения:   ", pretty);
-	print_value(stream, _weight, "Вес (кг):       ", pretty);
-	print_value(stream, _predator, "Хищник (1 - да, 0 - нет): ", pretty);
+	print_value(stream, Name, "Имя:            ", pretty);
+	print_value(stream, Month_of_birth, "Месяц рождения: ", pretty);
+	print_value(stream, Year_of_birth, "Год рождения:   ", pretty);
+	print_value(stream, Weight, "Вес (кг):       ", pretty);
+	print_value(stream, Predator, "Хищник (1 - да, 0 - нет): ", pretty);
 }

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Lab6_Kotkov": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}

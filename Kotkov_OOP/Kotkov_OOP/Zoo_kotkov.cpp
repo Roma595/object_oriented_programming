@@ -36,7 +36,7 @@ void Zoo_kotkov::delete_data() {
 
 bool Zoo_kotkov::load_data(std::ifstream& stream) {
 	boost::archive::text_iarchive ar(stream);
-	ar&* this;
+	ar& *this;
 	return true;
 }
 
