@@ -24,6 +24,7 @@ namespace Lab6_Kotkov
         {
             base.AnimalToSrtruct(ref item);
             item.Can_fly = this.Can_fly;
+            item.Bird = true;
         }
 
 

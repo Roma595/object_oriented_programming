@@ -116,8 +116,6 @@ namespace Lab6_Kotkov
                 checkBoxPredator.Checked = false;
                 checkBoxCanFly.Checked = false;
                 checkBoxIsBird.Checked = false;
-                labelFly.Visible = false;
-
                 return;
             }
 
@@ -134,7 +132,6 @@ namespace Lab6_Kotkov
             if (animal is Bird bird)
             {
                 checkBoxCanFly.Enabled = true;
-                labelFly.Visible = true;
                 checkBoxCanFly.Visible = true;
                 checkBoxCanFly.Checked = bird.Can_fly;
                 checkBoxIsBird.Checked = true;
@@ -148,6 +145,7 @@ namespace Lab6_Kotkov
             if (selectedItem != -1)
             {
                 listBox.Items.RemoveAt(selectedItem);
+                zoo_cont.Animals.RemoveAt(selectedItem);
                 if (selectedItem != listBox.Items.Count)
                 {
                     listBox.SelectedIndex = selectedItem;
@@ -170,10 +168,29 @@ namespace Lab6_Kotkov
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textBoxName.Text) || string.IsNullOrEmpty(textBoxMonth.Text) || string.IsNullOrEmpty(textBoxYear.Text) || string.IsNullOrEmpty(textBoxWeight.Text))
+            if (string.IsNullOrEmpty(textBoxName.Text)  || 
+                string.IsNullOrEmpty(textBoxMonth.Text) || 
+                string.IsNullOrEmpty(textBoxYear.Text)  || 
+                string.IsNullOrEmpty(textBoxWeight.Text))
             {
                 MessageBox.Show(
                     "Не все поля заполненны",
+                    "Сообщение",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information,
+                    MessageBoxDefaultButton.Button1);
+                return;
+            }
+
+            if (Convert.ToInt32(textBoxMonth.Text) < 0   || 
+                Convert.ToInt32(textBoxMonth.Text) > 12  || 
+                Convert.ToInt32(textBoxYear.Text) < 1900 || 
+                Convert.ToInt32(textBoxYear.Text) > 2024 ||
+                Convert.ToInt32(textBoxWeight.Text) < 0  ||
+                Convert.ToInt32(textBoxWeight.Text) > 10000)
+            {
+                MessageBox.Show(
+                    "Данные введены некорректно!",
                     "Сообщение",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information,
@@ -184,29 +201,34 @@ namespace Lab6_Kotkov
             {
                 if (checkBoxIsBird.Checked)
                 {
-                    Bird bird = new();
-                    bird.Name = textBoxName.Text;
-                    bird.Month_of_birth = Convert.ToInt32(textBoxMonth.Text);
-                    bird.Year_of_birth = Convert.ToInt32(textBoxYear.Text);
-                    bird.Weight = Convert.ToDouble(textBoxWeight.Text);
-                    bird.Predator = checkBoxPredator.Checked;
-                    bird.Can_fly = checkBoxCanFly.Checked;
+                    Bird bird = new()
+                    {
+                        Name = textBoxName.Text,
+                        Month_of_birth = Convert.ToInt32(textBoxMonth.Text),
+                        Year_of_birth = Convert.ToInt32(textBoxYear.Text),
+                        Weight = Convert.ToDouble(textBoxWeight.Text),
+                        Predator = checkBoxPredator.Checked,
+                        Can_fly = checkBoxCanFly.Checked
+                    };
 
                     zoo_cont.AddBird(bird);
 
                 }
                 else
                 {
-                    Animal_kotkov animal = new();
-                    animal.Name = textBoxName.Text;
-                    animal.Month_of_birth = Convert.ToInt32(textBoxMonth.Text);
-                    animal.Year_of_birth = Convert.ToInt32(textBoxYear.Text);
-                    animal.Weight = Convert.ToDouble(textBoxWeight.Text);
-                    animal.Predator = checkBoxPredator.Checked;
+                    Animal_kotkov animal = new()
+                    {
+                        Name = textBoxName.Text,
+                        Month_of_birth = Convert.ToInt32(textBoxMonth.Text),
+                        Year_of_birth = Convert.ToInt32(textBoxYear.Text),
+                        Weight = Convert.ToDouble(textBoxWeight.Text),
+                        Predator = checkBoxPredator.Checked
+                    };
 
                     zoo_cont.AddAnimal(animal);
                 }
                 UpdateList(zoo_cont);
+                listBox.SelectedIndex = listBox.Items.Count - 1;
             }
             catch
             {
@@ -223,10 +245,29 @@ namespace Lab6_Kotkov
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textBoxName.Text) || string.IsNullOrEmpty(textBoxMonth.Text) || string.IsNullOrEmpty(textBoxYear.Text) || string.IsNullOrEmpty(textBoxWeight.Text))
+            if (string.IsNullOrEmpty(textBoxName.Text)  || 
+                string.IsNullOrEmpty(textBoxMonth.Text) || 
+                string.IsNullOrEmpty(textBoxYear.Text)  || 
+                string.IsNullOrEmpty(textBoxWeight.Text))
             {
                 MessageBox.Show(
                     "Не все поля заполненны",
+                    "Сообщение",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information,
+                    MessageBoxDefaultButton.Button1);
+                return;
+            }
+
+            if (Convert.ToInt32(textBoxMonth.Text) < 0   ||
+                Convert.ToInt32(textBoxMonth.Text) > 12  ||
+                Convert.ToInt32(textBoxYear.Text) < 1900 ||
+                Convert.ToInt32(textBoxYear.Text) > 2024 ||
+                Convert.ToInt32(textBoxWeight.Text) < 0  ||
+                Convert.ToInt32(textBoxWeight.Text) > 10000)
+            {
+                MessageBox.Show(
+                    "Данные введены некорректно!",
                     "Сообщение",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information,
